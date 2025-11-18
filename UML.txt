@@ -1,0 +1,106 @@
+CLASSE: Categoria
+
+Atributos:
+- nome
+- tipo
+- limite_mes
+- descricao
+
+Métodos:
+- editar()
+- definir_limite()
+
+Relacionamentos:
+- Uma Categoria é usada por várias Transacoes
+
+=======================================================
+
+CLASSE: Transacao
+
+Atributos:
+- valor
+- categoria
+- data
+- descricao
+- forma_pagamento
+
+Métodos:
+- resumo()
+
+Relacionamentos:
+- Cada Transacao usa uma Categoria
+- Receita e Despesa herdam de Transacao
+
+=======================================================
+
+CLASSE: Receita (herda Transacao)
+
+Atributos:
+(herdados de Transacao)
+
+Métodos:
+- nenhum
+
+Relacionamentos:
+- É um tipo de Transacao
+
+=======================================================
+
+CLASSE: Despesa (herda Transacao)
+
+Atributos:
+(herdados de Transacao)
+
+Métodos:
+- nenhum
+
+Relacionamentos:
+- É um tipo de Transacao
+
+=======================================================
+
+CLASSE: Orcamento Mes
+
+Atributos:
+- ano
+- mes
+- definir_orcamento
+- definir_valor
+
+Métodos:
+- adicionar_transacao()
+- calcular_total()
+
+Relacionamentos:
+- Um Orcamento Mes possui várias Transacoes
+- Um Orcamento Mes possui vários Alertas
+
+=======================================================
+
+CLASSE: Alerta
+
+Atributos:
+- mensagem
+- tipo
+- data
+
+Métodos:
+- mostrar()
+
+Relacionamentos:
+- Um Alerta pertence a um OrcamentoMes
+
+=======================================================
+
+CLASSE: Config
+
+Atributos:
+- valor_minimo_alerta
+- mes_comparativos
+- meta_economia
+
+Métodos:
+- alterar()
+
+Relacionamentos:
+- Usada pelo sistema como configuração geral
