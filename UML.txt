@@ -11,11 +11,11 @@ Métodos:
 - definir_limite()
 
 Relacionamentos:
-- Uma Categoria é usada por várias Transacoes
+- Uma Categoria é usada por várias Lancamentos
 
 =======================================================
 
-CLASSE: Transacao
+CLASSE: Lancamento
 
 Atributos:
 - valor
@@ -28,34 +28,34 @@ Métodos:
 - resumo()
 
 Relacionamentos:
-- Cada Transacao usa uma Categoria
-- Receita e Despesa herdam de Transacao
+- Cada Lancamento usa uma Categoria
+- Receita e Despesa herdam de Lancamento
 
 =======================================================
 
-CLASSE: Receita (herda Transacao)
+CLASSE: Receita (herda Lancamento)
 
 Atributos:
-(herdados de Transacao)
+(herdados de Lancamento)
 
 Métodos:
 - nenhum
 
 Relacionamentos:
-- É um tipo de Transacao
+- É um tipo de Lancamento
 
 =======================================================
 
-CLASSE: Despesa (herda Transacao)
+CLASSE: Despesa (herda Lancamento)
 
 Atributos:
-(herdados de Transacao)
+(herdados de Lancamento)
 
 Métodos:
 - nenhum
 
 Relacionamentos:
-- É um tipo de Transacao
+- É um tipo de Lancamento
 
 =======================================================
 
@@ -68,11 +68,11 @@ Atributos:
 - definir_valor
 
 Métodos:
-- adicionar_transacao()
+- adicionar_lancamento()
 - calcular_total()
 
 Relacionamentos:
-- Um Orcamento Mes possui várias Transacoes
+- Um Orcamento Mes possui vários Lancamentos
 - Um Orcamento Mes possui vários Alertas
 
 =======================================================
