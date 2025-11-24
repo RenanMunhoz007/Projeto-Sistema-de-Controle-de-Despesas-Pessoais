@@ -1,4 +1,4 @@
-class Transacao: # Classe base das transacoes
+class Lancamento: # Classe base dos Lancamentos
     def __init__(self, valor, categoria, data, descricao, forma_pagamento):
         self.valor = valor
         self.categoria = categoria
@@ -6,8 +6,9 @@ class Transacao: # Classe base das transacoes
         self.descricao = descricao
         self.forma_pagamento = forma_pagamento
 
-class Receita(Transacao): # Transacao do tipo receita 
+class Receita(Lancamento): # Transacao do tipo receita 
     pass
 
-class Despesa(Transacao): # Transacao tipo despesa
+class Despesa(Lancamento): # Transacao tipo despesa
+
     pass
