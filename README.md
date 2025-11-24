@@ -15,7 +15,7 @@ Atributos:
 - limite_mes  
 - descricao  
 
-### 2. Transacao (classe base)
+### 2. Lancamento (classe base)
 Classe base que representa qualquer tipo de movimentação financeira.  
 Atributos:
 - valor  
